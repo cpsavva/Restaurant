@@ -38,7 +38,6 @@ var customerNew = {
 // =============================================================
 app.get('/', function (req, res){
 	res.sendFile(path.join(__dirname, 'main.html'));
-	res.sendFile(path.join(__dirname, 'main.css'));
 });
 
 app.get('/reserve', function(req, res) {
