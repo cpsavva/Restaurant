@@ -1,5 +1,5 @@
 
-Dependencies
+// Dependencies
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -18,7 +18,6 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 app.get('/tables', function(req, res){
-  
 	res.sendFile(path.join(__dirname + '/tables.html'));
 });
 
@@ -29,16 +28,6 @@ app.get('/reserve', function(req, res){
 app.get("/", function(req, res) {
 	res.sendFile(path.join(__dirname + '/main.html'));
 });
-
-// Creates JSON object for tables
-app.get('/api/tables', function(req, res){	
-		res.json(tables);
-})
-
-// Creates JSON object for reservations
-app.get('/api/waitList', function(req, res){	
-		res.json(waitList);
-})
 
 
 app.listen(PORT, function() {
