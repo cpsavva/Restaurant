@@ -57,6 +57,14 @@ body {
     color: #000;
 }
 
-.jumbotron, .footer, .well {
+.jumbotron, .footer, .well, .panel {
 	background-color:rgba(238, 238, 238, .6);
+}
+
+footer {
+	position: fixed;
+	height: 25px;
+	bottom: 0;
+	width: 100%;
+
 }
