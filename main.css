@@ -1,3 +1,4 @@
+
 #reservations{
 
 }
@@ -27,5 +28,29 @@
     border-top-right-radius: 3px;
 }
 
+.parallax { 
+    /* The image used */
+    background-image: url("./images/henrique-felix-113545.jpg");
 
+    /* Set a specific height */
+    height: 500px; 
 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+},
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.jumbotron, .footer {
+	background-color:rgba(238, 238, 238, .6);
+}
