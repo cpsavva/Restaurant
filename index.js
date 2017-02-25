@@ -1,5 +1,5 @@
 
-// Dependencies
+Dependencies
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -18,6 +18,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 app.get('/tables', function(req, res){
+  
 	res.sendFile(path.join(__dirname + '/tables.html'));
 });
 
