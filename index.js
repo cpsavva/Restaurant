@@ -29,6 +29,16 @@ app.get("/", function(req, res) {
 	res.sendFile(path.join(__dirname + '/main.html'));
 });
 
+// Creates JSON object for tables
+app.get('/api/tables', function(req, res){	
+		res.json(tables);
+})
+
+// Creates JSON object for reservations
+app.get('/api/waitList', function(req, res){	
+		res.json(waitList);
+})
+
 
 app.listen(PORT, function() {
 	console.log("App listening on PORT: " + PORT);
