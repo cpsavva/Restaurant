@@ -18,6 +18,34 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(__dirname));
 
+app.get('/tables', function(req, res){
+	res.sendFile(path.join(__dirname + '/tables.html'));
+});
+
+app.get('/reserve', function(req, res){
+	res.sendFile(path.join(__dirname + '/reservations.html'));
+});
+
+app.get("/", function(req, res) {
+	res.sendFile(path.join(__dirname + '/main.html'));
+});
+
+//below code to be modified for text file
+
+app.get('/api/tables', function(req, res){
+	 var contents = fs.readFileSync("tables.json");
+	 var jsonContent = JSON.parse(contents);
+	res.json(jsonContent); 
+
+});
+
+app.get('/api/waitlist', function(req, res){
+	 var wcontents = fs.readFileSync("waitlist.json");
+	 var jsonWaitListContent = JSON.parse(wcontents);
+	res.json(jsonWaitListContent); 
+
+});
+
 
 //Reservations (DATA)
 // =============================================================
